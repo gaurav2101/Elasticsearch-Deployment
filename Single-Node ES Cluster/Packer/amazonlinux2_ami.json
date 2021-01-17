@@ -1,0 +1,47 @@
+{
+    "variables" : {
+      "aws_access_key" : "AKIAWJ36C65V2FALYXXS", 
+      "aws_secret_key" : "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",
+      "region" : "us-east-1"
+    },  
+    "builders" : [
+      {   
+        "type": "amazon-ebs",
+        "access_key": "{{user `aws_access_key`}}",
+        "secret_key": "{{user `aws_secret_key`}}",
+        "region": "{{user `region`}}",
+        "ami_name": "elastic-base-ami-{{timestamp}}",
+        "instance_type": "t2.micro",
+        "source_ami_filter": {
+          "filters": {
+            "virtualization-type": "hvm",
+            "name": "amzn2-ami-hvm-*-x86_64-ebs",
+            "root-device-type": "ebs"
+          },  
+          "owners": [ "amazon" ],  
+          "most_recent": true
+        },
+        "communicator" : "ssh",        
+        "ssh_username": "ec2-user"     
+      }   
+    ],
+    "provisioners" : [
+      {
+        "type" : "shell",
+        "inline" : ["sudo yum update -y"]
+      },
+      {
+        "type" : "shell",
+        "script" : "scripts/javasetup.sh"
+      },
+      {
+        "type" : "file",
+        "source" : "files/elasticsearch.repo",
+        "destination" : "/tmp/"
+      },
+      {
+        "type" : "shell",
+        "script" : "scripts/elasticsetup.sh"
+      }
+    ] 
+}
