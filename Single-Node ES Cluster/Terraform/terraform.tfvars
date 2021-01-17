@@ -1,5 +1,4 @@
-aws_access_key = "AKIAWJ36C65V2FALYXXS"
-aws_secret_key = "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"
+aws_access_key = ""
+aws_secret_key = ""
 region = "us-east-1"
 instance_type = "t2.medium"
-public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDOUUTl9U/z7sttVsn7PnNMFsRoelv+XfWISDdjVAbcqVG6b7oZvsp9O+U9IiBPtrfaip7tODk2OyPsDBtd/48vrrLZ2QbUQek8Um2/vBVlby18fzA9NNKEqaSwOcGBY5d0R2kJSmtKaMbiLlKUrS7xjvucGuE3chhURsSSOOfbs+1vJNDeyl+jIqwXrU0K3g3PLAr44Gt0ECAn401IIGAp8/sXvrdmxhkf3fcEthx8PGSZCUxUkQfNsJN5yXb/7K/j+6Kl3QPbPMPXP7yRfOmryUtTNOoX7bgPTy6/oWKQ4dJXCxXglxGbw5JstHLhNIij5iOfL+189bI3/iuAf72/ gyadav@internal@XOR-GAURAV"
