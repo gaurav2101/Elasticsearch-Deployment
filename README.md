@@ -2,7 +2,7 @@
 
 This Deployment creates a single node elasticsearch cluster with TLS encryption and secure communication enabled. To generate the default passwords for the native elastic stack user one needs to run the elasticsearch utility present in the /usr/share/elasticsearch/bin directory.
 
-Command to generate passwords - ./elasticsearch-setup-passwords auto|interactive
+       Command to generate passwords - ./elasticsearch-setup-passwords auto|interactive
 - Auto mode will generate random passwords for the users
 - Interactive mode will let user set custom passwords
 
