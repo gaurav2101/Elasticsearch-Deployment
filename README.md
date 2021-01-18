@@ -4,6 +4,7 @@ This Deployment creates a single node elasticsearch cluster with TLS encryption 
 Command to generate passwords - ./elasticsearch-setup-passwords auto|interactive
 - Auto mode will generate random passwords for the users
 - Interactive mode will let user set custom passwords
+
 Node will be accessible through AWS Systems Manager. There is no need to create a bastion/Jump host to login into the server. 
 
 Project Directory Structure
