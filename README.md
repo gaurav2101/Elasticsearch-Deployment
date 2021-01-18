@@ -9,23 +9,23 @@ Node will be accessible through AWS Systems Manager. There is no need to create 
 
 Project Directory Structure
 
-Single-Node ES Cluster
-       |
-       |__Packer
-       |     |
-       |     |__files
-       |     |     |__elasticsearch.repo
-       |     |__scripts     
-       |     |     |__elasticsetup.sh
-       |     |     |__javasetup.sh
-       |     |__amazonlinux2_ami.json
-       |
-       |__Terraform
-             |
-             |__main.tf
-             |__provider.tf
-             |__variables.tf
-             |__terraform.tfvars
+       Single-Node ES Cluster
+              |
+              |__Packer
+              |     |
+              |     |__files
+              |     |     |__elasticsearch.repo
+              |     |__scripts     
+              |     |     |__elasticsetup.sh
+              |     |     |__javasetup.sh
+              |     |__amazonlinux2_ami.json
+              |
+              |__Terraform
+                    |
+                    |__main.tf
+                    |__provider.tf
+                    |__variables.tf
+                    |__terraform.tfvars
 
 Tools Used
 1. Packer - To create the pre-baked AMI containing elasticsearch installation and configs.
