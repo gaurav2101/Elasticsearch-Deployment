@@ -30,15 +30,15 @@ Single-Node ES Cluster
 Tools Used
 1. Packer - To create the pre-baked AMI containing elasticsearch installation and configs.
 
-Image Used - Amazon Linux2
+    Image Used - Amazon Linux2
 
-AWS Region - us-east-1
+    AWS Region - us-east-1
 
-Jdk - Amazon Correto 11
+    Jdk - Amazon Correto 11
 
-Elasticsearch Version - 7.10
+    Elasticsearch Version - 7.10
  
- Command to generate AMI - packer build amazonlinux2_ami.json
+       Command to generate AMI - packer build amazonlinux2_ami.json
 
 2. Terraform - To provision the system in AWS.
 
