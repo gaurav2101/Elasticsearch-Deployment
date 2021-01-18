@@ -30,7 +30,7 @@ Single-Node ES Cluster
 Tools Used
 1. Packer - To create the pre-baked AMI containing elasticsearch installation and configs.
 
-    Image Used - Amazon Linux2
+    Base Image - Amazon Linux2
 
     AWS Region - us-east-1
 
@@ -43,6 +43,7 @@ Tools Used
 2. Terraform - To provision the system in AWS.
 
    Steps to provision the infrastucture on AWS
+   
        1.  Go to terraform directory
        2.  Initialize the terraform working directory
                terraform init 
