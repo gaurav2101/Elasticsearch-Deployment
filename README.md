@@ -6,16 +6,7 @@ Command to generate passwords - ./elasticsearch-setup-passwords auto|interactive
 - Interactive mode will let user set custom passwords
 Node will be accessible through AWS Systems Manager. There is no need to create a bastion/Jump host to login into the server. 
 
-Tools Used
-1. Packer - To create the pre-baked AMI containing elasticsearch installation and configs.
-Image Used - Amazon Linux2
-AWS Region - us-east-1
-Jdk - Amazon Correto 11
-Elasticsearch Version - 7.10
-
-2. Terraform - To provision the instance in AWS
-
-Project Setup
+Project Directory Structure
 
 Single-Node ES Cluster
        |
@@ -34,3 +25,24 @@ Single-Node ES Cluster
              |__provider.tf
              |__variables.tf
              |__terraform.tfvars
+
+Tools Used
+1. Packer - To create the pre-baked AMI containing elasticsearch installation and configs.
+Image Used - Amazon Linux2
+AWS Region - us-east-1
+Jdk - Amazon Correto 11
+Elasticsearch Version - 7.10
+ 
+ Command to generate AMI - packer build amazonlinux2_ami.json
+
+2. Terraform - To provision the system in AWS.
+
+   Steps to provision the infrastucture on AWS
+       1.  Go to terraform directory
+       2.  Initialize the terraform working directory
+               terraform init 
+       3.  Create a terraform execution plan
+               terraform plan -out tfplan
+       4.  Apply the changes to create the desired state 
+               terraform apply tfplan
+    
